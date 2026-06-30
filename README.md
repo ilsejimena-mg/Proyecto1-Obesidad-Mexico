@@ -4,7 +4,7 @@
 Este proyecto analiza los principales factores de riesgo asociados a la obesidad y el sobrepeso en población de México, Colombia y Perú. A través de limpieza de datos, análisis exploratorio y visualización en Excel, se identificaron patrones clave que pueden orientar estrategias de salud pública.
 
 ## Contexto
-La obesidad representa uno de los mayores desafíos de salud pública en Latinoamérica. Según la OMS, más del 50% de la población adulta en México, Colombia y Perú presenta sobrepeso u obesidad, siendo una de las principales causas de diabetes, enfermedades cardiovasculares y muerte prematura. Entender sus factores de riesgo es clave para la prevención.
+La obesidad representa uno de los mayores desafíos de salud pública en Latinoamérica. Según la OMS, más del 50% de la población adulta en México presenta sobrepeso u obesidad, siendo una de las principales causas de diabetes, enfermedades cardiovasculares y muerte prematura. Entender sus factores de riesgo es clave para la prevención.
 
 ## Dataset
 - **Fuente:** [Kaggle - Obesity or CVD Risk Dataset](https://www.kaggle.com/datasets/aravindpcoder/obesity-or-cvd-risk-classifyregressorcluster)
@@ -27,15 +27,15 @@ La obesidad representa uno de los mayores desafíos de salud pública en Latinoa
 2. ¿Existe diferencia significativa entre hombres y mujeres?
 3. ¿El historial familiar influye en el nivel de obesidad?
 4. ¿Las personas con obesidad hacen menos actividad física?
-5. ¿Qué grupo de edad presenta el IMC más alto?
-6. ¿El tipo de transporte se relaciona con la obesidad?
+5. ¿El tipo de transporte se relaciona con la obesidad?
+6. ¿Quienes consumen comida calórica tienen mayor IMC?
 
 ## Hallazgos Principales
 1. El grupo **18-35 años** concentra el **89%** de los casos — es el grupo con mayor riesgo acumulado
-2. No existe diferencia significativa de obesidad según el género
-3. El **historial familiar** es el factor más determinante: personas con antecedentes tienen **966 casos de obesidad vs solo 8** sin historial
+2. El **historial familiar** es el factor más determinante: personas con antecedentes tienen **966 casos de obesidad vs solo 8** sin historial
+3. Los **hombres de 36-60 años** presentan el IMC más alto: **32.9** — clasificado como obesidad según la OMS
 4. Las personas con obesidad tienen **menor actividad física** (FAF promedio: 0.87 vs 1.27 en peso normal)
-5. Los **hombres de 36-60 años** presentan el IMC más alto: **32.9** — clasificado como obesidad según la OMS
+5. Quienes consumen comida calórica tienen un IMC promedio de **30.5 vs 24.3** sin consumo
 6. El **transporte público** concentra 760 casos de obesidad; bicicleta y caminata tienen casi cero
 
 ## Interpretación Médico-Social
@@ -50,6 +50,17 @@ Los datos revelan un patrón preocupante pero prevenible. La obesidad en esta po
 **Población en riesgo:** El grupo 18-35 años es el más vulnerable en términos de volumen. Intervenir en este grupo con programas de salud preventiva tendría el mayor impacto poblacional.
 
 **Conclusión general:** La obesidad en Latinoamérica es un problema multifactorial donde los determinantes sociales de la salud juegan un papel tan importante como los factores individuales. Los datos sugieren que las políticas públicas más efectivas serían aquellas que combinen educación nutricional, acceso a actividad física y atención especial a familias con historial de obesidad.
+
+## Cómo Replicar este Análisis
+1. Descarga el dataset original desde el link en la sección Dataset
+2. Abre el archivo en Excel y elimina filas duplicadas (Datos → Quitar duplicados)
+3. Crea las columnas calculadas:
+   - **Grupo Edad:** `=SI(B2<=17,"0-17",SI(B2<=35,"18-35",SI(B2<=60,"36-60","60+")))`
+   - **IMC:** `=Peso/(Altura*Altura)`
+   - **Categoría IMC:** `=SI(IMC<18.5,"Bajo_Peso",SI(IMC<25,"Normal",SI(IMC<30,"Sobrepeso","Obesidad")))`
+4. Genera tablas dinámicas cruzando Grupo Edad, Género, Categoría IMC y demás variables de interés
+5. Crea gráficos dinámicos a partir de cada tabla
+6. Organiza los gráficos en una hoja de Dashboard con conclusiones basadas en los datos
 
 ## Dashboard
 ![Dashboard](DashboardObesidad1.png)
