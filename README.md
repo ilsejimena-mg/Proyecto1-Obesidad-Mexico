@@ -27,4 +27,4 @@ Análisis exploratorio de datos sobre obesidad y sobrepeso en población de Méx
 5. Quienes consumen comida calórica tienen IMC promedio de 30.5 vs 24.3 sin consumo
 
 ## Dashboard
-![Dashboard](Dashboard1.png)
+![Dashboard](DashboardObesidad1.png)
