@@ -4,7 +4,7 @@
 Este proyecto analiza los principales factores de riesgo asociados a la obesidad y el sobrepeso en población de México, Colombia y Perú. A través de limpieza de datos, análisis exploratorio y visualización en Excel, se identificaron patrones clave que pueden orientar estrategias de salud pública.
 
 ## Contexto
-La obesidad representa uno de los mayores desafíos de salud pública en Latinoamérica. Según la OMS, más del 50% de la población adulta en México presenta sobrepeso u obesidad, siendo una de las principales causas de diabetes, enfermedades cardiovasculares y muerte prematura. Entender sus factores de riesgo es clave para la prevención.
+La obesidad representa uno de los mayores desafíos de salud pública en Latinoamérica. Según la OMS, más del 50% de la población adulta en México, Colombia y Perú presenta sobrepeso u obesidad, siendo una de las principales causas de diabetes, enfermedades cardiovasculares y muerte prematura. Entender sus factores de riesgo es clave para la prevención.
 
 ## Dataset
 - **Fuente:** [Kaggle - Obesity or CVD Risk Dataset](https://www.kaggle.com/datasets/aravindpcoder/obesity-or-cvd-risk-classifyregressorcluster)
@@ -16,7 +16,7 @@ La obesidad representa uno de los mayores desafíos de salud pública en Latinoa
 
 ## Estructura del archivo Excel
 - **Proyecto 1** → Datos limpios con columnas calculadas
-- **Análisis 1 al 7** → Tablas dinámicas por grupo de edad, género, historial familiar, actividad física, transporte y alimentación
+- **Análisis 1 al 6** → Tablas dinámicas por grupo de edad, género, historial familiar, actividad física, transporte y alimentación
 - **Dashboard** → Visualización final con 6 gráficas y conclusiones
 
 ## Herramientas
@@ -26,16 +26,17 @@ La obesidad representa uno de los mayores desafíos de salud pública en Latinoa
 1. ¿Qué grupo de edad tiene mayor riesgo de obesidad?
 2. ¿Existe diferencia significativa entre hombres y mujeres?
 3. ¿El historial familiar influye en el nivel de obesidad?
-4. ¿Las personas con obesidad hacen menos actividad física?
-5. ¿El tipo de transporte se relaciona con la obesidad?
-6. ¿Quienes consumen comida calórica tienen mayor IMC?
+4. ¿Qué grupo de edad presentan el IMC más alto?
+5. ¿Las personas con obesidad hacen menos actividad física?
+6. ¿El tipo de transporte se relaciona con la obesidad?
+ 
 
 ## Hallazgos Principales
 1. El grupo **18-35 años** concentra el **89%** de los casos — es el grupo con mayor riesgo acumulado
-2. El **historial familiar** es el factor más determinante: personas con antecedentes tienen **966 casos de obesidad vs solo 8** sin historial
-3. Los **hombres de 36-60 años** presentan el IMC más alto: **32.9** — clasificado como obesidad según la OMS
-4. Las personas con obesidad tienen **menor actividad física** (FAF promedio: 0.87 vs 1.27 en peso normal)
-5. Quienes consumen comida calórica tienen un IMC promedio de **30.5 vs 24.3** sin consumo
+2. No existe diferencia significativa de obesidad entre hombres y mujeres
+3. El **historial familiar** es el factor más determinante: personas con antecedentes tienen **966 casos de obesidad vs solo 8** sin historial
+4. Los **hombres de 36-60 años** presentan el IMC más alto: **32.9** — clasificado como obesidad según la OMS
+5. Las personas con obesidad tienen **menor actividad física** (FAF promedio: 0.87 vs 1.27 en peso normal)
 6. El **transporte público** concentra 760 casos de obesidad; bicicleta y caminata tienen casi cero
 
 ## Interpretación Médico-Social
